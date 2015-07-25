@@ -11,5 +11,17 @@ public class Tab {
 		this.tab = tb;
 		
 	}
+	
+	public String toString(){
+		
+		String str = new String();
+		for (int i=0; i<tab.size(); i++){
+			str = str + tab.get(i).toString();
+			str = str + "; ";
+		}
+		
+		return str;
+		
+	}
 		
 }

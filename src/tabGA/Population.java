@@ -4,19 +4,21 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Population {
+	
+	ArrayList<Tab> population;
 
 	public Population(Score score) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
-		ArrayList<Tab> population = new ArrayList<Tab>(GA.POPULATION_SIZE);
-
-		for (int i = 0; i < population.size(); i++) {
+		population = new ArrayList<Tab>();
+		
+		for (int i = 0; i < GA.POPULATION_SIZE; i++) {
 
 			population.add(getRandomTab(score));
-			
+			//System.out.println(population.get(i).toString());
 		}
 		
-		System.out.println(population.toString());
-
+		
+		
 	}
 
 	public static Tab  getRandomTab(Score score) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
@@ -37,6 +39,21 @@ public class Population {
 
 		
 		return newTab;
+	}
+	
+	public String toString(){
+		
+		String str = new String();
+				
+		for (int i = 0; i < population.size(); i++){
+			
+			str = str + population.get(i).toString();
+			str = str + " NEXT TAB: ";
+			//System.out.println(str);
+		}
+		
+		return str;
+		
 	}
 
 	

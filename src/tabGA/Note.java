@@ -14,9 +14,13 @@ public class Note {
 	
 	public Note(String pitch, Integer eventNum){
 		
-		this.pitch = Integer.getInteger(pitch);
+		this.pitch = Integer.parseInt(pitch);
 		this.eventNum = eventNum;
 		
 	}
 
+	public String toString(){
+		return "Pitch: " + pitch + ", Event num: " + eventNum;
+	}
+	
 }

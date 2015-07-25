@@ -86,13 +86,20 @@ public class Lute {
 		
 		String fieldName = "PITCH_" + pitch + "_POSITIONS";
 		//String value = String.valueOf(TesterConstants.class.getField(fieldName).get(null));
-		System.out.println(fieldName);
+		//System.out.println(fieldName);
 		String[] positionStrings = (String[]) Lute.class.getField(fieldName).get(null);
+				
+		/*
+		for (int i=0; i<positionStrings.length; i++) {
+			System.out.println(positionStrings[i]);
+		}
+		*/
 		
 		ArrayList<FingeredNote> positions = new ArrayList<FingeredNote>();
 		for(int i=0; i<positionStrings.length;i++){
 			
 			positions.add(new FingeredNote(positionStrings[i]));
+			//System.out.println(new FingeredNote(positionStrings[i]));
 			
 		}
 

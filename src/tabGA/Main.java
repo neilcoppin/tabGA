@@ -6,20 +6,22 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws FileNotFoundException, IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
 		Scanner scanner = new Scanner(new File("input.txt"));
 		Score score = new Score();
-		Integer eventNum = new Integer(0);
+		Integer eventNum = 1;
 		GA ga = new GA();
+		
 
 		while (scanner.hasNext()) {
 
+			Note nte = new Note(scanner.next(),eventNum);
+			//System.out.println(nte.toString());
+			score.addNote(nte);
 			eventNum++;
-			System.out.println(scanner.next());
-			score.addNote(new Note(scanner.next(), eventNum));
-
 		}
+		
 		scanner.close();
 
 		ga.start(score);

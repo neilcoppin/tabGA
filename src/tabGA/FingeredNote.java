@@ -12,7 +12,8 @@ public class FingeredNote {
     
     public FingeredNote(String str){
     	
-    	this.course = (int)str.charAt(0);
+    	//this.course = (int)str.charAt(0);
+    	this.course = Integer.parseInt(str.substring(0, 1));
     	this.fret = (int)Integer.parseInt(str.substring(1, str.length()));
     	
     }

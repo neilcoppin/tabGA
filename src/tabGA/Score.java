@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Score {
 
-	private ArrayList<Note> notes;
+	private ArrayList<Note> notes = new ArrayList<Note>();
 
 	public void addNote(Note note) {
 
