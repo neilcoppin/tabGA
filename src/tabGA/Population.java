@@ -55,6 +55,10 @@ public class Population {
 		return str;
 		
 	}
+	
+	public int getSize(){
+		return population.size();
+	}
 
 	
 

@@ -12,6 +12,7 @@ public class Main {
 		Score score = new Score();
 		Integer eventNum = 1;
 		GA ga = new GA();
+		Tab bestCandidate = null;
 		
 
 		while (scanner.hasNext()) {
@@ -24,8 +25,8 @@ public class Main {
 		
 		scanner.close();
 
-		ga.start(score);
-		
+		bestCandidate = ga.start(score);
+		System.out.println("The best tab is: " + bestCandidate.tab);
 
 	}
 

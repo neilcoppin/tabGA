@@ -16,8 +16,11 @@ public class GA {
 		
 		initialPop = new Population(this.score);
 		
-		System.out.println(initialPop.toString());		
-				
+		System.out.println(initialPop.toString());
+		
+		bestCandidate = FitnessFunction.getFittestIndividual(initialPop);
+		
+		
 		return bestCandidate;
 		
 	}
