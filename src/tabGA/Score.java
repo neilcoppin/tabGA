@@ -23,5 +23,6 @@ public class Score {
 		return notes.get(i);
 		
 	}
+	
 
 }

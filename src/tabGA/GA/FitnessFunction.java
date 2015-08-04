@@ -1,4 +1,7 @@
-package tabGA;
+package tabGA.GA;
+
+import tabGA.FingeredNote;
+import tabGA.Tab;
 
 public class FitnessFunction {
 
@@ -19,6 +22,7 @@ public class FitnessFunction {
 			System.out.println(currentScore);
 
 		}
+		System.out.println("The best score: " + bestScore);
 		
 		return fittest;
 	}

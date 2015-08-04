@@ -5,8 +5,8 @@ public class FingeredNote {
     int fret;
     
     // Places a finger at chosen string, fret location
-    public FingeredNote(int string, int fret){
-        this.course = string;
+    public FingeredNote(int course, int fret){
+        this.course = course;
         this.fret = fret;
     }
     
@@ -19,7 +19,7 @@ public class FingeredNote {
     }
     
     // Gets x coordinate
-    public int getString(){
+    public int getCourse(){
         return this.course;
     }
     
@@ -30,7 +30,7 @@ public class FingeredNote {
     
     // Gets the distance between two finger positions
     public double distanceTo(FingeredNote fingeredNote){
-        int xDistance = Math.abs(getString() - fingeredNote.getString());
+        int xDistance = Math.abs(getCourse() - fingeredNote.getCourse());
         int yDistance = Math.abs(getFret() - fingeredNote.getFret());
         double distance = Math.sqrt( (xDistance*xDistance) + (yDistance*yDistance) );
         
@@ -39,6 +39,6 @@ public class FingeredNote {
     
     @Override
     public String toString(){
-        return getString()+", "+getFret();
+        return getCourse()+", "+getFret();
     }
 }

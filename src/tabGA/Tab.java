@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 public class Tab {
 	
-	ArrayList<FingeredNote> tab = new ArrayList<FingeredNote>();
+	public ArrayList<FingeredNote> tab = new ArrayList<FingeredNote>();
+	public int cost = 0;
 	
 	public Tab(ArrayList<FingeredNote> tb){
 		
@@ -22,6 +23,15 @@ public class Tab {
 		
 		return str;
 		
+	}
+	
+	public FingeredNote getFingeredNote(int i){
+		return tab.get(i);
+	}
+	
+	public int getSize(){
+		
+		return tab.size();
 	}
 		
 }

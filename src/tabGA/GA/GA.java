@@ -1,4 +1,7 @@
-package tabGA;
+package tabGA.GA;
+
+import tabGA.Score;
+import tabGA.Tab;
 
 public class GA {
 	
@@ -19,6 +22,7 @@ public class GA {
 		System.out.println(initialPop.toString());
 		
 		bestCandidate = FitnessFunction.getFittestIndividual(initialPop);
+		
 		
 		
 		return bestCandidate;

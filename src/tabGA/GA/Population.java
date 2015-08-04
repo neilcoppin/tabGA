@@ -1,7 +1,13 @@
-package tabGA;
+package tabGA.GA;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import tabGA.FingeredNote;
+import tabGA.Lute;
+import tabGA.Note;
+import tabGA.Score;
+import tabGA.Tab;
 
 public class Population {
 	
