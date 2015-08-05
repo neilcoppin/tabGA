@@ -19,7 +19,7 @@ public class FitnessFunction {
 				fittest = currentTab;
 				bestScore = currentScore;
 			};
-			System.out.println(currentScore);
+			//System.out.println(currentScore);
 
 		}
 		System.out.println("The best score: " + bestScore);
@@ -27,6 +27,7 @@ public class FitnessFunction {
 		return fittest;
 	}
 
+	//returns the cost/fitness of the tab and assigns this cost to the tab object 
 	private static int getFitness(Tab tab) {
 		int score = 0;
 		FingeredNote currentFingeredNote = null;
@@ -37,6 +38,9 @@ public class FitnessFunction {
 			score = score + currentFingeredNote.getFret();
 			
 		}
+		
+		//assign the value to the tab
+		tab.setCost(score);
 		
 		return score;
 	}

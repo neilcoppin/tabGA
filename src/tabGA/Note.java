@@ -10,8 +10,12 @@ public class Note {
 			"F#", "G", "G#", "A", "A#", "B" };
 	public static final String[] FLATS = { "C", "Db", "D", "Eb", "E", "F",
 			"Gb", "G", "Ab", "A", "Bb", "B" };
-	public static final String[] NATURALS = { "C", "D", "E", "F", "G", "A", "B" };
-
+	//public static final String[] NATURALS = { "C", "D", "E", "F", "G", "A", "B" };
+	public static final String[] NATURALS = {"A", "B", "C", "D", "E", "F", "G"};
+	
+	
+	
+	/*
 	public static final byte[] OCTAVE_0 = { 0, 2, 4, 5, 7, 9, 11 };
 	public static final byte[] OCTAVE_1 = { 12, 14, 16, 17, 19, 21, 23 };
 	public static final byte[] OCTAVE_2 = { 24, 26, 28, 29, 31, 33, 35 };
@@ -23,6 +27,18 @@ public class Note {
 	public static final byte[] OCTAVE_8 = { 96, 98, 100, 101, 103, 105, 107 };
 	public static final byte[] OCTAVE_9 = { 108, 110, 112, 113, 115, 117, 119 };
 	public static final byte[] OCTAVE_10 = { 120, 122, 124, 125, 127 };
+	*/
+	
+	public static final byte[] OCTAVE_0 = { 21, 23, 24, 26, 28, 29, 31 };
+	public static final byte[] OCTAVE_1 = { 33, 35, 36, 38, 40, 41, 43 };
+	public static final byte[] OCTAVE_2 = { 45, 47, 48, 50, 52, 53, 55 };
+	public static final byte[] OCTAVE_3 = { 57, 59, 60, 62, 64, 65, 67 };
+	public static final byte[] OCTAVE_4 = { 69, 71, 72, 74, 76, 77, 79 };
+	public static final byte[] OCTAVE_5 = { 81, 83, 84, 86, 88, 89, 91 };
+	public static final byte[] OCTAVE_6 = { 93, 95, 96, 98, 100, 101, 103 };
+	public static final byte[] OCTAVE_7 = { 105, 107, 108, 110, 112, 113, 115 };
+	public static final byte[] OCTAVE_8 = { 117, 119, 120, 122, 124, 125, 127 };
+
 
 	// Depreciated, no longer used
 	public static final byte[] ALL_VALUES_OCTAVE_0 = { 0, 1, 2, 3, 4, 5, 6, 7,
@@ -63,6 +79,7 @@ public class Note {
 	char accidental;
 	byte[] octaveValues;
 	byte accidentalValue = 0;
+	int transpose = 0;
 	Exception e;
 
 	public Note(Integer pitch, Integer eventNum) {
@@ -132,7 +149,10 @@ public class Note {
 	}
 
 	public void setOctave(char octave) {
+		System.out.println("NOTE.setOctave: received = " + octave);
 		this.octave = Character.getNumericValue(octave);
+		System.out.println("NOTE.setOctave: searched for = " + this.octave);
+		
 		if (this.octave == 0) {
 			octaveValues = OCTAVE_0;
 		} else if (this.octave == 1) {
@@ -152,6 +172,8 @@ public class Note {
 		} else {
 			octaveValues = OCTAVE_8;
 		}
+		
+		
 	}
 
 	public void setDuration(char dur) {
@@ -168,7 +190,7 @@ public class Note {
 	}
 
 	public String toString() {
-		String str = "Pitch: " +  pitch  + "; EventNum: " + eventNum;
+		String str = "Pitch: " +  pitch  + "; EventNum: " + eventNum + "; Octave: " + octave + "; Name: " + name + "; Accidental: " + accidental; 
 		return str;
 	}
 
@@ -191,7 +213,7 @@ public class Note {
 
 		for (int i = 0; i < NATURALS.length; i++) {
 			if (val.equals(NATURALS[i])) {
-				pitchValue = octaveValues[i];
+				pitchValue = octaveValues[(i)];
 				break;
 			}
 		}
@@ -204,7 +226,7 @@ public class Note {
 	public void setNotePitch() {
 		Integer pitchValue = -1;
 		String val = Character.toString(name);
-		System.out.println("NOTE: Converted this: " + getNotePitchString());
+		System.out.println("NOTE.setNotePitch: Converted this: " + getNotePitchString());
 
 		for (int i = 0; i < NATURALS.length; i++) {
 			if (val.equals(NATURALS[i])) {
@@ -226,7 +248,14 @@ public class Note {
 		return eventNum.intValue();
 	}
 	
+	public Integer getPitch(){
+		
+		return (pitch-transpose);
+	}
 	
+	public void setTranposition(int i){
+		transpose = i;
+	}
 
 	/*
 	 * public String getCourseAndFret() { String outputStr = null; boolean

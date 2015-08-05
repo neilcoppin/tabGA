@@ -56,6 +56,7 @@ public class Transcriber {
 		}
 		note.setDuration(currentChar);
 		note.setNotePitch();
+		System.out.println("NOTE: new note - " + note.toString());
 		return note;
 
 	}

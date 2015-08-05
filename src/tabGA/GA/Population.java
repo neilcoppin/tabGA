@@ -16,6 +16,7 @@ public class Population {
 	public Population(Score score) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
 		population = new ArrayList<Tab>();
+		//System.out.println("POPULATION: About to build pop");
 		
 		for (int i = 0; i < GA.POPULATION_SIZE; i++) {
 
@@ -34,12 +35,16 @@ public class Population {
 		for (int i = 0; i<score.length(); i++){
 			
 			Note currentNote = score.getNoteAt(i);
-			ArrayList<FingeredNote> legalPositions = Lute.getLegalPositions(currentNote.pitch);
+			//System.out.println("POPULATION: current Note is: " + currentNote);
+			ArrayList<FingeredNote> legalPositions = Lute.getLegalPositions(currentNote.getPitch());
+			//System.out.println("POPULATION: legal positions are: " + legalPositions);
 			Random randomGenerator = new Random();
 			tab.add(legalPositions.get(randomGenerator.nextInt(legalPositions.size())));
 			
 			
 		}
+		
+		
 		
 		Tab newTab = new Tab(tab);
 

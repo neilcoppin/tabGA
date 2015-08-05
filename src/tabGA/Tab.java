@@ -33,5 +33,11 @@ public class Tab {
 		
 		return tab.size();
 	}
+
+	public void setCost(int cost) {
+
+		this.cost = cost;
+		
+	}
 		
 }

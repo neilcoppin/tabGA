@@ -43,6 +43,9 @@ public class Lute {
 	// Guitar tab style positions  
 		public static final String[] NUMERIC_FRET_POSITIONS = { "0", "1", "2", "3", "4", "5",
 			"6", "7", "8", "9", "N10", "N11", "N12", "N13", "N14" };
+		
+	public static final int LOWEST_NOTE = 31;
+	public static final int HIGHEST_NOTE = 69;
 	
 	// Pitch positions. 1st char is string/course, 2nd(& 3rd) fret num. 0 = open 
 	public static final String[] PITCH_31_POSITIONS = {"60"};
@@ -88,15 +91,14 @@ public class Lute {
 	
 	public static ArrayList<FingeredNote> getLegalPositions(int pitch) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 		
-		int validPitch;
+		int validPitch = pitch;
 		
-		if (pitch>69){
-			validPitch = pitch - 12;
+		while(validPitch<31 || validPitch>69)
+		if (validPitch>69){
+			validPitch = validPitch - 12;
 		} else if (pitch<31){
-			validPitch = pitch + 12;
-		} else {
-			validPitch = pitch;
-		}
+			validPitch = validPitch + 6;
+		} 
 		
 		String fieldName = "PITCH_" + validPitch + "_POSITIONS";
 		//String value = String.valueOf(TesterConstants.class.getField(fieldName).get(null));

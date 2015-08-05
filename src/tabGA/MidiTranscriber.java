@@ -10,7 +10,7 @@ public class MidiTranscriber extends Transcriber {
 			throws Exception {
 		char eventFirstChar = event.charAt(0);
 		System.out.println("Event counter: " + eventCounter);
-		System.out.println("eventFirstChar: " + eventFirstChar);
+		System.out.println("event = " + event);
 
 		// Check for valid note
 		boolean functionFound = false;

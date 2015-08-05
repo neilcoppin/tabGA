@@ -85,7 +85,7 @@ public class Main {
 		while (midiOutputScanner.hasNext()) {
 
 			if (lastEvent.charAt(0) == '@') {
-				System.out.println("MAIN: @ found");
+				//System.out.println("MAIN: @ found");
 				eventNum--;
 			} else {
 				eventNum++;
@@ -99,7 +99,7 @@ public class Main {
 
 				//System.out.println("event num is :: " + eventNum);
 				Note nte = new Note(currentEvent, eventNum);
-				System.out.println(nte.toString());
+				//System.out.println(nte.toString());
 				score.addNote(nte);
 
 			}
@@ -110,9 +110,11 @@ public class Main {
 
 		midiOutputScanner.close();
 
+		System.out.println("MAIN: Starting GA");
+		
+		score.transposeForLute();
 		bestCandidate = ga.start(score);
 		System.out.println("The best tab is: " + bestCandidate.toString());
-		System.out.println("The best tab score: " + bestCandidate.cost);
 		System.out.println("Length of score: " + score.length());
 		System.out.println("Length of tab: " + bestCandidate.getSize());
 		
