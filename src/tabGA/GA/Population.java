@@ -12,6 +12,10 @@ import tabGA.Tab;
 public class Population {
 	
 	ArrayList<Tab> population;
+	
+	public Population(){
+		population = new ArrayList<Tab>();
+	}
 
 	public Population(Score score) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
@@ -70,7 +74,14 @@ public class Population {
 	public int getSize(){
 		return population.size();
 	}
+	
+	public Tab getTabAt(int i){
+		return population.get(i);
+	}
 
+	public void addIndividual(Tab tab){
+		population.add(tab);
+	}
 	
 
 }

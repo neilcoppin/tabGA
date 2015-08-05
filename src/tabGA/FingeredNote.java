@@ -1,8 +1,11 @@
 package tabGA;
 
+import java.util.ArrayList;
+
 public class FingeredNote {
     int course;
     int fret;
+    int pitch;
     
     // Places a finger at chosen string, fret location
     public FingeredNote(int course, int fret){
@@ -16,6 +19,11 @@ public class FingeredNote {
     	this.course = Integer.parseInt(str.substring(0, 1));
     	this.fret = (int)Integer.parseInt(str.substring(1, str.length()));
     	
+    }
+    
+    public FingeredNote(String str, int pitch){
+    	this(str);
+    	this.pitch = pitch;
     }
     
     // Gets x coordinate
@@ -41,4 +49,39 @@ public class FingeredNote {
     public String toString(){
         return getCourse()+", "+getFret();
     }
+
+	public FingeredNote getRandomAlternative() throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
+
+		ArrayList<FingeredNote> possibleFingeredNotes = Lute.getLegalPositions(pitch);
+		FingeredNote newFNote = null;
+		
+		if(possibleFingeredNotes.size()<=1){
+			return this;
+		}
+		
+		String currentPosition = Integer.toString(course) + Integer.toString(fret);
+		
+		boolean unique = false;
+		while(!unique)
+		
+			for(int i=0;i<possibleFingeredNotes.size();i++){
+								
+				String potentialPosition = Integer.toString(possibleFingeredNotes.get(i).getCourse()) + Integer.toString(possibleFingeredNotes.get(i).getFret());
+				if(currentPosition.equalsIgnoreCase(potentialPosition)){
+					//do nothing
+				} else {
+					newFNote = possibleFingeredNotes.get(i);
+					unique = true;
+				}
+				
+								
+			}
+			
+		return newFNote;
+	}
+	
+	
+	
+	
+	
 }

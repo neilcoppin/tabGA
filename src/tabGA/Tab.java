@@ -39,5 +39,18 @@ public class Tab {
 		this.cost = cost;
 		
 	}
+
+	public int getCost() {
+
+		return cost;
+	}
+	
+	public void replaceFingeredNote(int i, FingeredNote newFNote){
+		
+		tab.set(i, newFNote);
+		
+	}
+	
+	
 		
 }

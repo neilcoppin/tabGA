@@ -25,13 +25,16 @@ public class GA {
 		bestCandidateOfInitialPop = FitnessFunction.getFittestIndividual(initialPop);
 		
 		Population lastPop = initialPop;
-		Population currentPop;
-		
-		for (int i=0; i<NUM_OF_GENERATIONS; i++){
-			
+		Population currentPop = new Population();
+				
+		for (int i=0; i<NUM_OF_GENERATIONS.intValue(); i++){
+			currentPop = Evolver.createNextGeneration(lastPop);
+			lastPop = currentPop;
 		}
 		
+		System.out.println("CURRENT POP SIZE: "+currentPop.getSize());
 		
+		bestCandidate = FitnessFunction.getFittestIndividual(currentPop);
 		
 		
 		
