@@ -12,6 +12,10 @@ public class TabTranscriber extends Transcriber{
 		
 		for (int i=0; i<tab.getSize();i++){
 			
+			if(i%4==0){
+				pw.println('b');
+			}
+			
 			if(i%16==0){
 				pw.println('b');
 				pw.println();

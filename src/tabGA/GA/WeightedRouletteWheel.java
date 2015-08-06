@@ -11,19 +11,23 @@ public class WeightedRouletteWheel {
 	Random spin = new Random();
 
 	public WeightedRouletteWheel(Population pop) {
-		double total_fitness = 0.0;
+		double totalFitness = 0.0;
 		// for (Tab i : pop)
 		for (int i = 0; i < pop.getSize(); i++) {
-			total_fitness += fitness(pop.getTabAt(i));
+			totalFitness += fitness(pop.getTabAt(i));
 		}
+		//System.out.println("Total Fitness: " + totalFitness);
 		wheel = new TreeMap<Double, Tab>();
 		double key = 0.0;
 		// for (Tab i : pop)
 		for (int i = 0; i < pop.getSize(); i++) {
-			double likelihood = fitness(pop.getTabAt(i)) / total_fitness;
+			double likelihood = fitness(pop.getTabAt(i)) / totalFitness;
 			key += likelihood;
 			wheel.put(key, pop.getTabAt(i));
+			//System.out.println("WRW: Tab fitness: " + fitness(pop.getTabAt(i))
+				//	+ " ; Key: " + key);
 		}
+		 
 	}
 
 	private Double fitness(Tab i) {
@@ -34,14 +38,20 @@ public class WeightedRouletteWheel {
 		return getIndividual(spin.nextDouble());
 	}
 
-	
 	public Tab getIndividual(double pocket) {
+		// Double getDub = wheel.tailMap(pocket).firstKey();
+		// Tab individual = wheel.get(getDub);
 		Tab individual = wheel.get(wheel.tailMap(pocket).firstKey());
 		if (individual == null) {
 			throw new NullPointerException(
 					"WeightedRouletteWheel: No individual at " + pocket);
 		}
+		// System.out.println("Pocket: " + pocket + " ; getDub: " + getDub +
+		// " ; individual: " + individual.getCost());
+		// System.out.println("Pocket: " + pocket);
 		return individual;
 	}
+
+	
 
 }

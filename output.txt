@@ -1,0 +1,557 @@
+b
+b
+b
+
+b
+x  i   
+x f    
+x o    
+b
+x l    
+xh     
+x i    
+x   a  
+b
+x    h 
+x  g   
+x   h  
+x  f   
+b
+x  b   
+x     e
+x     a
+x     i
+b
+b
+
+b
+x    a 
+x    b 
+x    a 
+x    a 
+b
+x    a 
+x if  f
+b
+x   a  
+x    g 
+x   cd 
+b
+x o    
+x b    
+x   c  
+b
+b
+
+b
+x o f  
+x  e h 
+x o    
+b
+x   d  
+x   h  
+x     a
+xi     
+b
+x  i   
+x e    
+xa    a
+b
+xi     
+x  i   
+x f    
+x    i 
+b
+b
+
+b
+xh     
+x  i   
+xi    i
+b
+x  b  a
+x   f a
+b
+x    f 
+x   b  
+x    hi
+b
+x o    
+x  g   
+x   c  
+b
+b
+
+b
+xi  f  
+x   i  
+x o    
+b
+x o  i 
+x  d   
+x     a
+b
+xf   a 
+x i    
+b
+x h   e
+xf     
+xi     
+xa     
+b
+b
+
+b
+x     e
+x d    
+xi     
+xf     
+b
+x g f  
+x     f
+b
+x     f
+x   a g
+x   b  
+b
+x    d 
+xi     
+x b    
+b
+b
+
+b
+x   c  
+x o f  
+b
+x  ec  
+x o    
+x    i 
+x  d   
+b
+x     a
+x o    
+x d    
+x  k   
+b
+x f   a
+xi     
+x  i   
+b
+b
+
+b
+xa     
+x   d  
+x n    
+x  i   
+b
+x o  d 
+x   f a
+b
+x   f a
+x o    
+x d    
+b
+x b    
+x o    
+x d    
+b
+b
+
+b
+xa     
+x  e   
+xi     
+x d    
+b
+x o    
+x f h  
+x o    
+b
+x  i   
+x f    
+x   g  
+xi     
+b
+x d    
+xi     
+x fb   
+b
+b
+
+b
+xi     
+x d    
+x f    
+b
+x   f  
+xh     
+x d    
+b
+x b    
+x  b   
+x    d 
+x   a  
+b
+x    g 
+x b    
+x  b   
+b
+b
+
+b
+x     i
+x   c  
+x g    
+xc     
+b
+x i  d 
+b
+x l c a
+xd   h 
+b
+x    a 
+x    h 
+xb    a
+b
+b
+
+b
+xc     
+x i  d 
+b
+xf   ha
+b
+x i  h 
+x    a 
+x    h 
+b
+x  g  a
+x  b   
+x   h  
+x  f   
+b
+b
+
+b
+x b    
+x    f 
+x    h 
+x   a  
+b
+x b    
+x   a  
+x   f a
+b
+x    h 
+x g    
+x i    
+x l    
+b
+xd     
+x   c  
+x g    
+b
+b
+
+b
+xd   d 
+b
+x l  ha
+x i  h 
+x     f
+b
+x    h 
+xb    a
+x h    
+b
+xd   d 
+b
+b
+
+b
+xf  c a
+xd   h 
+b
+x     a
+x i    
+xf    f
+b
+xg     
+x n   e
+x n    
+b
+xh     
+x  g  e
+x l    
+b
+b
+
+b
+xc     
+x   a  
+b
+xd bk  
+x    i 
+x     a
+x   c  
+b
+x g   e
+xc     
+b
+xd   hi
+b
+b
+
+b
+xf  c a
+xd  c  
+x     f
+b
+x   c  
+x g   a
+xc     
+b
+x i  d 
+b
+x l c a
+xd  c  
+b
+b
+
+b
+x     f
+x   c  
+x  g  a
+b
+x  b   
+x  d   
+x   k  
+x b    
+b
+x    f 
+x  cc  
+x   a  
+b
+x b    
+x    f 
+x  g  e
+b
+b
+
+b
+x  b  e
+x  b  e
+b
+xd     
+x h    
+xd     
+b
+x o  i 
+xf     
+x o    
+x    k 
+b
+xf     
+xi     
+x l    
+b
+b
+
+b
+xd    a
+x o    
+xa     
+x i    
+b
+x f    
+x o    
+xd     
+b
+xc    e
+xil    
+b
+x fff  
+b
+b
+
+b
+xb i   
+x o  h 
+x b    
+b
+x   f  
+x     i
+x    h 
+x g    
+b
+x h    
+x b  d 
+x  b   
+b
+x    d 
+x    f 
+x    g 
+b
+b
+
+b
+x    d 
+xi     
+x  g   
+x   c  
+b
+x ob   
+x   ih 
+b
+xi     
+xi   i 
+x   h  
+b
+x     a
+x o    
+x  i   
+x  k   
+b
+b
+
+b
+xa    a
+xi     
+x  i   
+b
+x f    
+x   d  
+x n    
+x  i   
+b
+x o  d 
+x   f a
+b
+x   f a
+x   a  
+x    g 
+b
+b
+
+b
+x    d 
+xi     
+x  g   
+b
+x   c  
+x ob   
+b
+x   ih 
+xi     
+x o  i 
+b
+x   h  
+x     a
+xf    f
+b
+b
+
+b
+x i    
+x h   e
+x l    
+b
+xi     
+xa     
+x     e
+x d    
+b
+x o    
+x l    
+b
+x gb   
+x    a 
+x    a 
+b
+b
+
+b
+x    b 
+x   b  
+x   cd 
+b
+x o    
+x  g   
+x    h 
+b
+xi b   
+x  ec  
+x o    
+b
+x o d  
+x  d   
+x     a
+b
+b
+
+b
+xi     
+x d    
+x  k   
+b
+x f   a
+xi     
+x  i   
+x f    
+b
+x    i 
+xh     
+x d    
+b
+x o   i
+x   f a
+b
+b
+
+b
+x   f a
+x o    
+x  i   
+b
+xab    
+x o    
+x d    
+x f    
+b
+x  e   
+xi     
+x  i   
+xi     
+b
+x f h  
+xi     
+x d    
+b
+b
+
+b
+x f    
+x   g  
+x o    
+x d    
+b
+x o    
+x fb   
+x o    
+b
+x d    
+xa     
+x  b   
+b
+xh     
+x d    
+x og   
+b
+b
+
+b
+x   f  
+b
+e

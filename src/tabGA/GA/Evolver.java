@@ -14,8 +14,6 @@ public class Evolver {
 		WeightedRouletteWheel wheel = new WeightedRouletteWheel(pop);
 		Population newPop = new Population();
 
-		System.out.println("EVOLVER: I'm here!");
-		
 		while (pop.getSize()>newPop.getSize()){
 			Tab[] parents = getParents(wheel);
 			Tab[] children = crossover(parents);

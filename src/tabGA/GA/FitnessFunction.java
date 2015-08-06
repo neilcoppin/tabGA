@@ -30,14 +30,9 @@ public class FitnessFunction {
 	//returns the cost/fitness of the tab and assigns this cost to the tab object 
 	private static int getFitness(Tab tab) {
 		int score = 0;
-		FingeredNote currentFingeredNote = null;
 		
-		for (int i=0; i<tab.tab.size(); i++){
-			currentFingeredNote = tab.tab.get(i);
-			
-			score = score + currentFingeredNote.getFret();
-			
-		}
+		score =+ DistanceFromNutCostFunc.getCost(tab);
+		score =+ FingerStretchCostFunc.getCost(tab);
 		
 		//assign the value to the tab
 		tab.setCost(score);
@@ -45,4 +40,5 @@ public class FitnessFunction {
 		return score;
 	}
 
+	
 }
