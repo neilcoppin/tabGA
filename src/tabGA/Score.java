@@ -23,24 +23,58 @@ public class Score {
 		return notes.get(i);
 
 	}
-	
-	public void transposeForLute(){
-		
-		int lowestNote = getLowestNote();
+
+	public void transposeForLute() {
+
+		Integer total = 0;
+		int idealPitch = 49;
+		int averagePitch;
+
+		for (int i = 0; i < length(); i++) {
+			total = (total + getNoteAt(i).getMidiPitch());
+		}
+
+		averagePitch = (total / length());
+
+		moveAllNotes(averagePitch,idealPitch);
+
+	}
+
+	public void moveAllNotes(int from, int to) {
+
 		int transposition;
 		
-		if (lowestNote < Lute.LOWEST_NOTE){
-			transposition = (Lute.LOWEST_NOTE-lowestNote);
+		if (from < to) {
+			transposition = (to - from);
 		} else {
-			transposition = (lowestNote-Lute.LOWEST_NOTE);
+			transposition = (from - to);
 		}
-		
+
 		System.out.println("Setting transposition at: " + transposition);
-		
-		for (int i=0; i< length(); i++){
+
+		for (int i = 0; i < length(); i++) {
 			getNoteAt(i).setTranposition(transposition);
 		}
-		
+
+	}
+
+	public void moveLowestNoteInScoreToRootOnSixth() {
+
+		int lowestNote = getLowestNote();
+		int transposition;
+
+		if (lowestNote < Lute.LOWEST_NOTE) {
+			transposition = (Lute.LOWEST_NOTE - lowestNote);
+		} else {
+			transposition = (lowestNote - Lute.LOWEST_NOTE);
+		}
+
+		System.out.println("Setting transposition at: " + transposition);
+
+		for (int i = 0; i < length(); i++) {
+			getNoteAt(i).setTranposition(transposition);
+		}
+
 	}
 
 	private int getLowestNote() {

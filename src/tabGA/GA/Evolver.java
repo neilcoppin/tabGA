@@ -37,6 +37,7 @@ public class Evolver {
 		for(int i=0;i<child.getSize();i++){
 			if(rand.nextDouble()<MUTATION_RATE){
 				FingeredNote newFNote = child.getFingeredNote(i).getRandomAlternative();
+				//System.out.println("MUTATING! Replacing Note: " + child.getFingeredNote(i).toString() + " with " + newFNote.toString());
 				child.replaceFingeredNote(i, newFNote);
 			}
 		}
@@ -49,10 +50,19 @@ public class Evolver {
 		Tab x = parents[0];
 		Tab y = parents[1];
 				
+				
 		boolean[] pattern = new boolean[x.getSize()];
 		for(int i=0; i<x.getSize(); i++){
 			pattern[i] = rand.nextBoolean(); 
 		}
+		
+		/*
+		System.out.print("The crossover pattern is: ");
+		for (boolean i : pattern){
+			System.out.print(i + "; ");
+		}
+		*/
+		
 		
 		for(int i=0; i<x.getSize(); i++){
 			
