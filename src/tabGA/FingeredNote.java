@@ -6,6 +6,7 @@ public class FingeredNote {
     int course;
     int fret;
     int pitch;
+    int eventNum;
     
     // Places a finger at chosen string, fret location
     public FingeredNote(int course, int fret){
@@ -24,6 +25,12 @@ public class FingeredNote {
     public FingeredNote(String str, int pitch){
     	this(str);
     	this.pitch = pitch;
+    }
+    
+    public FingeredNote(String str, int pitch, int eventNum){
+    	this(str);
+    	this.pitch = pitch;
+    	this.eventNum = eventNum;
     }
     
     // Gets x coordinate
@@ -52,7 +59,7 @@ public class FingeredNote {
 
 	public FingeredNote getRandomAlternative() throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
-		ArrayList<FingeredNote> possibleFingeredNotes = Lute.getLegalPositions(pitch);
+		ArrayList<FingeredNote> possibleFingeredNotes = Lute.getLegalPositions(pitch, eventNum);
 		FingeredNote newFNote = null;
 		
 		if(possibleFingeredNotes.size()<=1){
@@ -80,7 +87,9 @@ public class FingeredNote {
 		return newFNote;
 	}
 	
-	
+	public int getEventNum(){
+		return eventNum;
+	}
 	
 	
 	

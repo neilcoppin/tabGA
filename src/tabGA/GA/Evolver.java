@@ -23,6 +23,7 @@ public class Evolver {
 			newPop.addIndividual(children[1]);
 		}
 		
+		System.out.println(FitnessFunction.getFittestIndividual(newPop).toString());
 		
 		return newPop;
 

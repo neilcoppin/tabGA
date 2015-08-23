@@ -40,7 +40,7 @@ public class Population {
 			
 			Note currentNote = score.getNoteAt(i);
 			//System.out.println("POPULATION: current Note is: " + currentNote);
-			ArrayList<FingeredNote> legalPositions = Lute.getLegalPositions(currentNote.getPitch());
+			ArrayList<FingeredNote> legalPositions = Lute.getLegalPositions(currentNote.getPitch(),currentNote.getEventNum());
 			//System.out.println("POPULATION: legal positions are: " + legalPositions);
 			Random randomGenerator = new Random();
 			tab.add(legalPositions.get(randomGenerator.nextInt(legalPositions.size())));

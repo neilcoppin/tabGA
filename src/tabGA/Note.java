@@ -250,7 +250,7 @@ public class Note {
 	
 	public Integer getPitch(){
 		
-		return (pitch-transpose);
+		return (pitch+transpose);
 	}
 	
 	public void setTranposition(int i){

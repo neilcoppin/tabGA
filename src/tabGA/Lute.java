@@ -86,7 +86,7 @@ public class Lute {
 	public static final String[] PITCH_68_POSITIONS = { "113" };
 	public static final String[] PITCH_69_POSITIONS = { "114" };
 
-	public static ArrayList<FingeredNote> getLegalPositions(int pitch)
+	public static ArrayList<FingeredNote> getLegalPositions(int pitch, int eventNum)
 			throws IllegalArgumentException, IllegalAccessException,
 			NoSuchFieldException, SecurityException {
 
@@ -114,7 +114,7 @@ public class Lute {
 		ArrayList<FingeredNote> positions = new ArrayList<FingeredNote>();
 		for (int i = 0; i < positionStrings.length; i++) {
 
-			positions.add(new FingeredNote(positionStrings[i], validPitch));
+			positions.add(new FingeredNote(positionStrings[i], validPitch, eventNum));
 			// System.out.println(new FingeredNote(positionStrings[i]));
 
 		}

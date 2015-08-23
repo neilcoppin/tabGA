@@ -15,7 +15,11 @@ public class Main {
 
 	public static void main(String[] args) throws Exception {
 
-		File midiFile = new File("test.mid");
+		File inputFolder = new File("C:/inputFolder");
+		File midiFile = inputFolder.listFiles()[0];
+		System.out.println("Found file: " + midiFile.getName());
+		
+		
 		MidiTranscriber midiTrsc = new MidiTranscriber();
 		PrintWriter pw = new PrintWriter(new FileWriter("output.txt"), true);
 		PrintWriter pw2 = new PrintWriter(new FileWriter("midiOutput.txt"),
@@ -99,7 +103,7 @@ public class Main {
 
 				//System.out.println("event num is :: " + eventNum);
 				Note nte = new Note(currentEvent, eventNum);
-				//System.out.println(nte.toString());
+				System.out.println(nte.toString());
 				score.addNote(nte);
 
 			}
@@ -112,7 +116,8 @@ public class Main {
 
 		System.out.println("MAIN: Starting GA");
 		
-		score.transposeForLute();
+		score.transposeByOctave();
+		
 		bestCandidate = ga.start(score);
 		System.out.println("The best tab is: " + bestCandidate.toString());
 		System.out.println("Length of score: " + score.length());

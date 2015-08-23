@@ -24,7 +24,7 @@ public class Score {
 
 	}
 
-	public void transposeForLute() {
+	public void transposeForLuteByAverage() {
 
 		Integer total = 0;
 		int idealPitch = 49;
@@ -36,11 +36,46 @@ public class Score {
 
 		averagePitch = (total / length());
 
-		moveAllNotes(averagePitch,idealPitch);
+		moveAllNotesByInterval(averagePitch,idealPitch);
 
 	}
+	
+	public void transposeByOctave() {
 
-	public void moveAllNotes(int from, int to) {
+		int lowestNote = getLowestNote();
+		int octAdjust = 0;
+		
+		
+		while(lowestNote>=Lute.LOWEST_NOTE){
+			System.out.println("Current LN " + lowestNote);
+			if((lowestNote-12)>=Lute.LOWEST_NOTE){
+				octAdjust = (octAdjust-1);
+				lowestNote = (lowestNote-12);
+				System.out.println("Now LN is " + lowestNote);
+			} else if ((lowestNote-12)<Lute.LOWEST_NOTE){
+				break;
+			}
+		}
+		System.out.println("Lowest note found to be: " + lowestNote);
+		moveAllNotesByOctave(octAdjust);
+		
+
+		
+	}
+
+	public void moveAllNotesByOctave(int oct) {
+
+		int transposition = (12*oct);
+		
+		System.out.println("Setting transposition at: " + transposition);
+
+		for (int i = 0; i < length(); i++) {
+			getNoteAt(i).setTranposition(transposition);
+		}
+
+	}
+	
+	public void moveAllNotesByInterval(int from, int to) {
 
 		int transposition;
 		
@@ -79,12 +114,12 @@ public class Score {
 
 	private int getLowestNote() {
 
-		int lowestNote = 0;
+		int lowestNote = 127;
 		int currentNote = 0;
 
 		for (int i = 0; i < length(); i++) {
 			currentNote = getNoteAt(i).getMidiPitch();
-			if (currentNote > lowestNote) {
+			if (currentNote < lowestNote) {
 				lowestNote = currentNote;
 			}
 		}
