@@ -27,14 +27,16 @@ public class Main {
 		PrintWriter pw3 = new PrintWriter(new FileWriter("GAInput.txt"), true);
 		
 
-		Scanner scanner = new Scanner(MidiParser.midiToString(midiFile));
-		scanner.useDelimiter("\\s");
+		MidiParser.midiToString(midiFile, pw2);
+		Scanner scanner = new Scanner("midiOutput.txt");
+		//scanner.useDelimiter("\\s");
 
 		String event = new String();
 
 		boolean foundNote = false;
 
 		// K = key sig; V = voice; I = instrument; T = tempo;
+		/*
 		while (!foundNote) {
 			event = scanner.next();
 			for (int i = 0; i < Note.VALID_NOTES.length; i++) {
@@ -59,6 +61,9 @@ public class Main {
 
 			}
 		}
+		*/
+		
+		event = scanner.next();
 
 		while (scanner.hasNextLine()) {
 			// OLD SYSTEM COMMENCE
@@ -88,7 +93,7 @@ public class Main {
 
 		while (midiOutputScanner.hasNext()) {
 
-			if (lastEvent.charAt(0) == '@') {
+			if (lastEvent.charAt(0) == '#') {
 				//System.out.println("MAIN: @ found");
 				eventNum--;
 			} else {
@@ -97,8 +102,8 @@ public class Main {
 
 			currentEvent = midiOutputScanner.next();
 
-			if (currentEvent.charAt(0) == '@') {
-				//System.out.println("MAIN: Not recording @");
+			if (currentEvent.charAt(0) == '#') {
+				//System.out.println("MAIN: Not recording #");
 			} else {
 
 				//System.out.println("event num is :: " + eventNum);
