@@ -10,10 +10,11 @@ public class TabTranscriber extends Transcriber{
 		int currentEventNum;
 		TabBuilder tBuilder = new TabBuilder();
 		tBuilder.newLine();
+		int lineBreakCounter = 0;
 		
 		for (int i=0; i<tab.getSize();i++){
 			
-			
+			/*
 			if(i%4==0){
 				pw.println('b');
 			}
@@ -23,6 +24,7 @@ public class TabTranscriber extends Transcriber{
 				pw.println();
 				pw.println('b');
 			}
+			*/
 			
 			currentEventNum = score.getNoteAt(i).getEventNum();
 			//System.out.println("Current event: " + currentEventNum +" Last Event: "+ lastEventNum);
@@ -34,8 +36,24 @@ public class TabTranscriber extends Transcriber{
 				tBuilder.newLine();
 				//System.out.println("Committing new line. Event " + currentEventNum);
 				tBuilder.addFingeredNote(tab.getFingeredNote(i));
+				
+				lineBreakCounter++;
+				if (lineBreakCounter==16){
+					pw.println('b');
+					pw.println();
+					pw.println('b');
+					lineBreakCounter=0;
+				}else if (lineBreakCounter==12){
+					pw.println('b');
+				}else if (lineBreakCounter==8){
+					pw.println('b');
+				}else if (lineBreakCounter==4){
+					pw.println('b');
+				}
 
 			}
+			
+			
 			
 			lastEventNum = currentEventNum;
 			

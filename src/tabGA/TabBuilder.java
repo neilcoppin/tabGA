@@ -4,12 +4,12 @@ import java.io.PrintWriter;
 
 public class TabBuilder {
 
-	StringBuilder line = new StringBuilder("x      ");
+	StringBuilder line = new StringBuilder("x       ");
 	int counter = 0;
 		
 	public void newLine(){
-		line.delete(0, 7);
-		line.append("x      ");
+		line.delete(0, 8);
+		line.append("x       ");
 		counter = 0;
 	}
 	

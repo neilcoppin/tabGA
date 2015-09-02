@@ -12,7 +12,7 @@ public class SameEventSameString {
 		int currentEvent;
 		int lastEvent = 0;
 		//ArrayList<Boolean> coursesInUse = new ArrayList<Boolean>();
-		boolean[] coursesInUse = new boolean[6];
+		boolean[] coursesInUse = new boolean[7];
 		
 		for (int i=1; i<tab.getSize(); i++){
 			

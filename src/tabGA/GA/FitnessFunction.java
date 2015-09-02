@@ -32,7 +32,7 @@ public class FitnessFunction {
 		int score = 0;
 		
 		score += DistanceFromNutCostFunc.getCost(tab);
-		score += FingerStretchCostFunc.getCost(tab);
+		//score += FingerStretchCostFunc.getCost(tab);
 		score += SameEventSameString.getCost(tab);
 		
 		//assign the value to the tab
