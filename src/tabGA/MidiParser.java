@@ -53,7 +53,8 @@ public class MidiParser {
 			System.out.print("@" + event.getTick() + " ");
 			MidiMessage message = event.getMessage();
 			
-			if (currentTick != lastTick){
+			if (currentTick != lastTick && currentTick != 0 && trackNumber != 1){
+				//System.out.print("Current Tick: " + currentTick + " Last tick: " + lastTick);
 				pw.println("#");
 			}
 			

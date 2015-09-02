@@ -5,6 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.CopyOption;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Scanner;
 
 import javax.sound.midi.InvalidMidiDataException;
@@ -16,19 +19,24 @@ public class Main {
 	public static void main(String[] args) throws Exception {
 
 		File inputFolder = new File("C:/inputFolder");
+		File outputFolder = new File("C:/outputFolder");
 		File midiFile = inputFolder.listFiles()[0];
-		System.out.println("Found file: " + midiFile.getName());
+		String fileName = midiFile.getName().trim();
+		String midiOutputFileName = new String("midiOutput.txt");
+		String tabFileName = new String(fileName + ".txt");
+		System.out.println("Found file: " + fileName);
 		
 		
 		MidiTranscriber midiTrsc = new MidiTranscriber();
 		PrintWriter pw = new PrintWriter(new FileWriter("output.txt"), true);
-		PrintWriter pw2 = new PrintWriter(new FileWriter("midiOutput.txt"),
+		PrintWriter pw2 = new PrintWriter(new FileWriter(midiOutputFileName),
 				true);
 		PrintWriter pw3 = new PrintWriter(new FileWriter("GAInput.txt"), true);
 		
 
 		MidiParser.midiToString(midiFile, pw2);
-		Scanner scanner = new Scanner("midiOutput.txt");
+		
+		Scanner scanner = new Scanner(midiOutputFileName);
 		//scanner.useDelimiter("\\s");
 
 		String event = new String();
@@ -83,26 +91,26 @@ public class Main {
 		pw2.close();
 		pw3.close();
 
-		Scanner midiOutputScanner = new Scanner(new File("GAinput.txt"));
+		Scanner midiOutputScanner = new Scanner(new File(midiOutputFileName));
 		Score score = new Score();
 		Integer eventNum = 0;
 		GA ga = new GA();
 		Tab bestCandidate = null;
-		String currentEvent;
-		String lastEvent = " ";
+		String currentEvent = " ";
+		//String lastEvent = " ";
 
 		while (midiOutputScanner.hasNext()) {
 
-			if (lastEvent.charAt(0) == '#') {
+			if (currentEvent.startsWith("#")) {
 				//System.out.println("MAIN: @ found");
-				eventNum--;
-			} else {
+				
 				eventNum++;
 			}
 
 			currentEvent = midiOutputScanner.next();
 
-			if (currentEvent.charAt(0) == '#') {
+			//if (currentEvent.charAt(0) == '#') {
+			if (currentEvent.startsWith("#")) {
 				//System.out.println("MAIN: Not recording #");
 			} else {
 
@@ -113,7 +121,7 @@ public class Main {
 
 			}
 
-			lastEvent = currentEvent;
+			//lastEvent = currentEvent;
 
 		}
 
@@ -134,6 +142,10 @@ public class Main {
 		pw.println("b");
 		pw.println("e");
 		pw.close();
+		
+		
+		File outputFile = new File(outputFolder, tabFileName);
+		Files.move(new File("output.txt").toPath(), outputFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 		
 	}
 

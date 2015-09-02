@@ -6,7 +6,7 @@ public class TabTranscriber extends Transcriber{
 
 	public void convertToCrippsTAB(Tab tab, Score score, PrintWriter pw) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException{
 		
-		int lastEventNum = 1;
+		int lastEventNum = 0;
 		int currentEventNum;
 		TabBuilder tBuilder = new TabBuilder();
 		tBuilder.newLine();
@@ -31,6 +31,7 @@ public class TabTranscriber extends Transcriber{
 			if(currentEventNum==lastEventNum){
 				tBuilder.addFingeredNote(tab.getFingeredNote(i));
 			} else {
+				//System.out.println("currentEventNum: " + currentEventNum + " ; lasteventnum: " + lastEventNum);
 				tBuilder.commitLine(pw);
 				//System.out.println("Fingers/notes added: " + tBuilder.getCount());
 				tBuilder.newLine();
