@@ -146,6 +146,7 @@ public class Main {
 		
 		File outputFile = new File(outputFolder, tabFileName);
 		Files.move(new File("output.txt").toPath(), outputFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+		System.out.println("Finished!");
 		
 	}
 
