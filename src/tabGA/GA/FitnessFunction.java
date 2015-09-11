@@ -22,7 +22,7 @@ public class FitnessFunction {
 			//System.out.println(currentScore);
 
 		}
-		System.out.println("The best score: " + bestScore);
+		//System.out.println("The best score: " + bestScore);
 		
 		return fittest;
 	}
@@ -31,9 +31,15 @@ public class FitnessFunction {
 	private static int getFitness(Tab tab) {
 		int score = 0;
 		
+		//Pre-optimisation config
 		score += DistanceFromNutCostFunc.getCost(tab);
-		//score += FingerStretchCostFunc.getCost(tab);
 		score += SameEventSameString.getCost(tab);
+		
+		// Optimisation
+		score += FingerStretchCostFunc.getCost(tab);
+		score += StringChangeCostFunc.getCost(tab);
+		score += FretJumpCostFunc.getCost(tab);
+		score += BarrePreferredCostFunc.getCost(tab);
 		
 		//assign the value to the tab
 		tab.setCost(score);

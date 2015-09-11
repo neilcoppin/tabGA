@@ -66,12 +66,12 @@ public class Lute {
 	public static final String[] PITCH_54_POSITIONS = { "713", "611", "56", "41" };
 	public static final String[] PITCH_55_POSITIONS = { "714", "612", "57", "42" };
 	public static final String[] PITCH_56_POSITIONS = { "613", "58", "43" };
-	public static final String[] PITCH_57_POSITIONS = { "614", "59", "44" };
+	public static final String[] PITCH_57_POSITIONS = { "614", "59", "44", "30" };
 	public static final String[] PITCH_58_POSITIONS = { "510", "45", "31" };
 	public static final String[] PITCH_59_POSITIONS = { "511", "46", "32" };
 	public static final String[] PITCH_60_POSITIONS = { "512", "47", "33" };
 	public static final String[] PITCH_61_POSITIONS = { "513", "48", "34" };
-	public static final String[] PITCH_62_POSITIONS = { "514", "49", "35" };
+	public static final String[] PITCH_62_POSITIONS = { "514", "49", "35", "20" };
 	public static final String[] PITCH_63_POSITIONS = { "410", "36", "21" };
 	public static final String[] PITCH_64_POSITIONS = { "411", "37", "22" };
 	public static final String[] PITCH_65_POSITIONS = { "412", "38", "23" };

@@ -129,12 +129,17 @@ public class Main {
 
 		System.out.println("MAIN: Starting GA");
 		
-		score.transposeByOctave();
+		//score.transposeByOctave();
 		
 		bestCandidate = ga.start(score);
-		System.out.println("The best tab is: " + bestCandidate.toString());
-		System.out.println("Length of score: " + score.length());
-		System.out.println("Length of tab: " + bestCandidate.getSize());
+		//System.out.println("The best tab is: " + bestCandidate.toString());
+		//System.out.println("The best tab score is: " + bestCandidate.cost);
+		//System.out.println("Length of score: " + score.length());
+		//System.out.println("Length of tab: " + bestCandidate.getSize());
+		
+		//Print title
+		pw.println("{\\CL/" + fileName + "}");
+		
 		
 		pw.println("b");
 		TabTranscriber tabTrsc = new TabTranscriber();
