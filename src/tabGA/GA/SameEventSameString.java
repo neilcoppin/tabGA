@@ -22,7 +22,7 @@ public class SameEventSameString {
 			if(currentEvent==lastEvent){
 				//System.out.println("Same event trigger: course " );
 				if(coursesInUse[tab.getFingeredNote(i).getCourse() - 1] == true){
-					score += 100;
+					score += FitnessFunction.PENALTY_CLASS_A;
 				}
 				
 				coursesInUse[tab.getFingeredNote(i).getCourse() - 1] = true;

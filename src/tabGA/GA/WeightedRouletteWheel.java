@@ -46,9 +46,9 @@ public class WeightedRouletteWheel {
 			throw new NullPointerException(
 					"WeightedRouletteWheel: No individual at " + pocket);
 		}
-		// System.out.println("Pocket: " + pocket + " ; getDub: " + getDub +
-		// " ; individual: " + individual.getCost());
-		// System.out.println("Pocket: " + pocket);
+		 //System.out.println("Pocket: " + pocket + " ; individual: " + individual.getCost());
+		 //System.out.println("Pocket: " + pocket);
+		
 		return individual;
 	}
 

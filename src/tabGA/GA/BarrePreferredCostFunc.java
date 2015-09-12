@@ -51,7 +51,7 @@ public class BarrePreferredCostFunc {
 		for(int i=1; i<chord.length; i++){
 			//System.out.println("Checked course " + (i) + " value is " + chord[i]);
 			if(chord[i] == chord[(i-1)] && chord[i] != -1) {
-				score -= 100000;
+				score += FitnessFunction.REWARD_CLASS_A;
 			}
 		}
 		//System.out.println("Score is: " + score);

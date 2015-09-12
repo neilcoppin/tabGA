@@ -44,9 +44,9 @@ public class FretJumpCostFunc {
 		//System.out.println("lastFret " + lastFret + " currentFret " + currentFret);
 		
 		if(currentFret > lastFret){
-			penalty = ((currentFret - lastFret)*10);
+			penalty = ((currentFret - lastFret)*FitnessFunction.PENALTY_CLASS_C);
 		} else {
-			penalty = ((lastFret - currentFret)*10);
+			penalty = ((lastFret - currentFret)*FitnessFunction.PENALTY_CLASS_C);
 		}
 		
 		//System.out.println("penalty " + penalty);

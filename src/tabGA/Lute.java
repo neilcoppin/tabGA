@@ -76,7 +76,7 @@ public class Lute {
 	public static final String[] PITCH_64_POSITIONS = { "411", "37", "22" };
 	public static final String[] PITCH_65_POSITIONS = { "412", "38", "23" };
 	public static final String[] PITCH_66_POSITIONS = { "413", "39", "24" };
-	public static final String[] PITCH_67_POSITIONS = { "414", "40", "25", "10" };
+	public static final String[] PITCH_67_POSITIONS = { "414", "310", "25", "10" };
 	public static final String[] PITCH_68_POSITIONS = { "311", "26", "11" };
 	public static final String[] PITCH_69_POSITIONS = { "312", "27", "12" };
 	public static final String[] PITCH_70_POSITIONS = { "313", "28", "13" };

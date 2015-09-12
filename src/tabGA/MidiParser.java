@@ -38,11 +38,11 @@ public class MidiParser {
 	int trackNumber = 0;
 	for (Track track : sequence.getTracks()) {
 		trackNumber++;
-		System.out.println("Track " + trackNumber + ": size = "
-				+ track.size());
-		System.out.println();
-		System.out.println("Ticks per quarter note "+sequence.PPQ);
-		System.out.println(bpm+"BPM");
+		//System.out.println("Track " + trackNumber + ": size = "
+		//		+ track.size());
+		//System.out.println();
+		//System.out.println("Ticks per quarter note "+sequence.PPQ);
+		//System.out.println(bpm+"BPM");
 		
 		long currentTick;
 		long lastTick = 0;
@@ -50,7 +50,7 @@ public class MidiParser {
 		for (int i = 0; i < track.size(); i++) {
 			MidiEvent event = track.get(i);
 			currentTick = event.getTick();
-			System.out.print("@" + event.getTick() + " ");
+			//System.out.print("@" + event.getTick() + " ");
 			MidiMessage message = event.getMessage();
 			
 			if (currentTick != lastTick && currentTick != 0 && trackNumber != 1){
@@ -60,15 +60,15 @@ public class MidiParser {
 			
 			if (message instanceof ShortMessage) {
 				ShortMessage sm = (ShortMessage) message;
-				System.out.print("Channel: " + sm.getChannel() + " ");
+				//System.out.print("Channel: " + sm.getChannel() + " ");
 				if (sm.getCommand() == NOTE_ON) {
 					int key = sm.getData1();
 					int octave = (key / 12) - 1;
 					int note = key % 12;
 					String noteName = NOTE_NAMES[note];
 					int velocity = sm.getData2();
-					System.out.println("Note on, " + noteName + octave
-							+ " key=" + key + " velocity: " + velocity);
+					//System.out.println("Note on, " + noteName + octave
+					//		+ " key=" + key + " velocity: " + velocity);
 					pw.println(key);
 				} else if (sm.getCommand() == NOTE_OFF) {
 					int key = sm.getData1();
@@ -76,18 +76,18 @@ public class MidiParser {
 					int note = key % 12;
 					String noteName = NOTE_NAMES[note];
 					int velocity = sm.getData2();
-					System.out.println("Note off, " + noteName + octave
-							+ " key=" + key + " velocity: " + velocity);
+					//System.out.println("Note off, " + noteName + octave
+					//		+ " key=" + key + " velocity: " + velocity);
 				} else {
-					System.out.println("Command:" + sm.getCommand());
+					//System.out.println("Command:" + sm.getCommand());
 				}
 			} else {
-				System.out.println("Other message: " + message.getClass());
+				//System.out.println("Other message: " + message.getClass());
 			}
 			lastTick = currentTick;
 		}
 
-		System.out.println();
+		//System.out.println();
 	}
 
 }

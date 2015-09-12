@@ -21,7 +21,7 @@ public class FingerStretchCostFunc {
 				fretB = tab.getFingeredNote((i - 1)).getFret();
 
 				
-				score += getStretch(fretA, fretB) * 100;
+				score += getStretch(fretA, fretB) * FitnessFunction.PENALTY_CLASS_A;
 
 			}
 			

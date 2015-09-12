@@ -13,6 +13,11 @@ public class Tab {
 		
 	}
 	
+	public Tab(Tab anotherTab){
+		this.tab = anotherTab.tab;
+		this.cost = anotherTab.cost;
+	}
+	
 	public String toString(){
 		
 		String str = new String();
