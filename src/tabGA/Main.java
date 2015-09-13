@@ -137,6 +137,11 @@ public class Main {
 		//System.out.println("Length of score: " + score.length());
 		//System.out.println("Length of tab: " + bestCandidate.getSize());
 		
+		System.out.println("Total Events: " + bestCandidate.getFingeredNote(bestCandidate.getSize()-1).eventNum);
+		System.out.println("Total fingered notes: " + bestCandidate.getSize());
+		System.out.println("Num of single notes: " + bestCandidate.countSingleNotes());
+		System.out.println("Total number of chords: " + bestCandidate.countChords());
+		
 		//Print title
 		pw.println("{\\CL/" + fileName + "}");
 		

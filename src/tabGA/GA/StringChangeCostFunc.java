@@ -27,12 +27,12 @@ public class StringChangeCostFunc {
 				/*System.out.println("Single note:: current: " + currentEvent
 						+ " last: " + lastEvent + " next: " + nextEvent);*/
 				if (currentString == lastString) {
-					score += FitnessFunction.REWARD_CLASS_C;
+					score += FitnessFunction.REWARD_CLASS_A;
 					//System.out.println("Same string @ event: " + currentEvent);
 				}
 			} else if (i == sizeOfTab) {
 				if (currentString == lastString) {
-					score += FitnessFunction.REWARD_CLASS_C;
+					score += FitnessFunction.REWARD_CLASS_A;
 					/*System.out.println("LAST EVENT!");
 					System.out.println("Same string @ event: " + currentEvent);*/
 				}

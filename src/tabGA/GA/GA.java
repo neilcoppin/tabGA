@@ -71,6 +71,7 @@ public class GA {
 		
 		//return bestCandidate;
 		return overallBestTab;
+		//return bestCandidateOfInitialPop;
 		
 	}
 

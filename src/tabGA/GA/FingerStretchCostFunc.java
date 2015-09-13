@@ -22,6 +22,7 @@ public class FingerStretchCostFunc {
 
 				
 				score += getStretch(fretA, fretB) * FitnessFunction.PENALTY_CLASS_A;
+				
 
 			}
 			

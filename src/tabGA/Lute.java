@@ -120,7 +120,7 @@ public class Lute {
 		ArrayList<FingeredNote> positions = new ArrayList<FingeredNote>();
 		for (int i = 0; i < positionStrings.length; i++) {
 
-			positions.add(new FingeredNote(positionStrings[i], validPitch, eventNum));
+			positions.add(new FingeredNote(positionStrings[i], validPitch, eventNum, positionStrings.length, i));
 			// System.out.println(new FingeredNote(positionStrings[i]));
 
 		}

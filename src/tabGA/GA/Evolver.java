@@ -7,7 +7,7 @@ import tabGA.Tab;
 
 public class Evolver {
 	
-	private final static double MUTATION_RATE = 0.07;
+	private final static double MUTATION_RATE = 0.1;
 
 	public static Population createNextGeneration(Population pop) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
