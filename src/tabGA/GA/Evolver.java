@@ -7,7 +7,7 @@ import tabGA.Tab;
 
 public class Evolver {
 	
-	private final static double MUTATION_RATE = 0.02;
+	private final static double MUTATION_RATE = 0.1;
 
 	public static Population createNextGeneration(Population pop) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
@@ -23,7 +23,7 @@ public class Evolver {
 			newPop.addIndividual(children[1]);
 		}
 		
-		System.out.println(FitnessFunction.getFittestIndividual(newPop).toString());
+		//System.out.println(FitnessFunction.getFittestIndividual(newPop).toString());
 		
 		return newPop;
 
@@ -38,6 +38,7 @@ public class Evolver {
 				FingeredNote newFNote = child.getFingeredNote(i).getRandomAlternative();
 				//System.out.println("MUTATING! Replacing Note: " + child.getFingeredNote(i).toString() + " with " + newFNote.toString());
 				child.replaceFingeredNote(i, newFNote);
+				
 			}
 		}
 		
