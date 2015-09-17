@@ -72,9 +72,9 @@ public class BarrePreferredCostFunc {
 		
 		chord[(course-1)] = fret;
 		//System.out.print("State of array: ");
-		for (int i = 0; i< chord.length; i++){
-			//System.out.print(chord[i] + ", ");
-		}
+		//for (int i = 0; i< chord.length; i++){
+		//	System.out.print(chord[i] + ", ");
+		//}
 		//System.out.println();
 		
 		

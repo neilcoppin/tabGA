@@ -6,7 +6,7 @@ import tabGA.Tab;
 public class GA {
 	
 	//Set mutation rate etc here
-	public static final Integer POPULATION_SIZE = 100;
+	public static final Integer POPULATION_SIZE = 100000;
 	public static final Integer NUM_OF_GENERATIONS = 500;
 	
 	Score score;

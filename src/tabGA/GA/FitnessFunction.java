@@ -5,11 +5,11 @@ import tabGA.Tab;
 
 public class FitnessFunction {
 	
-	public static final int PENALTY_CLASS_A = 10;
-	public static final int PENALTY_CLASS_B = 5;
+	public static final int PENALTY_CLASS_A = 3;
+	public static final int PENALTY_CLASS_B = 2;
 	public static final int PENALTY_CLASS_C = 1;
-	public static final int REWARD_CLASS_A = -100;
-	public static final int REWARD_CLASS_B = -50;
+	public static final int REWARD_CLASS_A = -3;
+	public static final int REWARD_CLASS_B = -2;
 	public static final int REWARD_CLASS_C = -1;
 
 	public static Tab getFittestIndividual(Population pop) {

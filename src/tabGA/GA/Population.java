@@ -25,7 +25,7 @@ public class Population {
 		for (int i = 0; i < GA.POPULATION_SIZE; i++) {
 
 			population.add(getRandomTab(score));
-			//System.out.println(population.get(i).toString());
+			System.out.print(i+" ; ");
 		}
 		
 		

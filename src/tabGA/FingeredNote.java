@@ -7,7 +7,7 @@ public class FingeredNote {
     int fret;
     int pitch;
     int eventNum;
-    boolean highestNeckPosition;
+    boolean lowestNeckPosition;
     
     // Places a finger at chosen string, fret location
     public FingeredNote(int course, int fret){
@@ -40,18 +40,18 @@ public class FingeredNote {
     	this.eventNum = eventNum;
     	
     	if(possOptions>(thisOption+1)){
-    		highestNeckPosition= false;
+    		lowestNeckPosition= false;
     		//System.out.println("Better alt available! Pitch:" + pitch + " Course: " + course + " Fret: " + fret);
     	} else {
-    		highestNeckPosition = true;
+    		lowestNeckPosition = true;
     		//System.out.println("Best option! Pitch:" + pitch + " Course: " + course + " Fret: " + fret);
     	}
     	
     	
     }
     
-    public boolean highestNeckPosition(){
-    	return highestNeckPosition;
+    public boolean lowestNeckPosition(){
+    	return lowestNeckPosition;
     }
     
     // Gets x coordinate

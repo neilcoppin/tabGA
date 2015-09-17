@@ -42,7 +42,7 @@ public class DistanceFromNutCostFunc {
 				//System.out.println("I love open strings! Score before: " + score);
 				score += FitnessFunction.REWARD_CLASS_A;
 				//System.out.println("I love open strings! Score after : " + score);
-			} else if (currentFingeredNote.highestNeckPosition() == true )	{
+			} else if (currentFingeredNote.lowestNeckPosition() == true )	{
 				score += FitnessFunction.REWARD_CLASS_A;
 				//System.out.println("Bonus for optimal option!");
 			} else {
