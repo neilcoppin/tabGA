@@ -2,8 +2,23 @@ package tabGA;
 
 import java.io.PrintWriter;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TabTranscriber.
+ */
 public class TabTranscriber extends Transcriber{
 
+	/**
+	 * Convert to cripps tab.
+	 *
+	 * @param tab the tab
+	 * @param score the score
+	 * @param pw the pw
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 */
 	public void convertToCrippsTAB(Tab tab, Score score, PrintWriter pw) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException{
 		
 		int lastEventNum = 0;

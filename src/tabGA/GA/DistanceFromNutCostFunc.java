@@ -3,8 +3,19 @@ package tabGA.GA;
 import tabGA.FingeredNote;
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class DistanceFromNutCostFunc penalises tabs that play frets
+ * unnecessarily high up the neck of the lute.
+ */
 public class DistanceFromNutCostFunc {
 
+	/**
+	 * Gets the cost.
+	 *
+	 * @param tab the tab
+	 * @return the cost
+	 */
 	public static int getCost(Tab tab) {
 		int score = 0;
 		FingeredNote currentFingeredNote = null;
@@ -28,6 +39,12 @@ public class DistanceFromNutCostFunc {
 		return score;
 	}
 	
+	/**
+	 * Gets the cost optimised.
+	 *
+	 * @param tab the tab
+	 * @return the cost optimised
+	 */
 	public static int getCostOptimised(Tab tab) {
 		int score = 0;
 		FingeredNote currentFingeredNote = null;

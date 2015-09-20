@@ -3,15 +3,37 @@ package tabGA.GA;
 import tabGA.FingeredNote;
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class FitnessFunction holds the constants for scoring 
+ * and methods to cost and rank tabs.
+ */
 public class FitnessFunction {
 	
+	/** The Constant PENALTY_CLASS_A. */
 	public static final int PENALTY_CLASS_A = 3;
+	
+	/** The Constant PENALTY_CLASS_B. */
 	public static final int PENALTY_CLASS_B = 2;
+	
+	/** The Constant PENALTY_CLASS_C. */
 	public static final int PENALTY_CLASS_C = 1;
+	
+	/** The Constant REWARD_CLASS_A. */
 	public static final int REWARD_CLASS_A = -3;
+	
+	/** The Constant REWARD_CLASS_B. */
 	public static final int REWARD_CLASS_B = -2;
+	
+	/** The Constant REWARD_CLASS_C. */
 	public static final int REWARD_CLASS_C = -1;
 
+	/**
+	 * Gets the fittest individual.
+	 *
+	 * @param pop the pop
+	 * @return the fittest individual
+	 */
 	public static Tab getFittestIndividual(Population pop) {
 		Tab fittest = null;
 		Tab currentTab = null;
@@ -34,6 +56,12 @@ public class FitnessFunction {
 		return fittest;
 	}
 
+	/**
+	 * Gets the fitness.
+	 *
+	 * @param tab the tab
+	 * @return the fitness
+	 */
 	//returns the cost/fitness of the tab and assigns this cost to the tab object 
 	private static int getFitness(Tab tab) {
 		int score = 0;
@@ -59,6 +87,12 @@ public class FitnessFunction {
 		return score;
 	}
 	
+	/**
+	 * Gets the worst individual.
+	 *
+	 * @param pop the pop
+	 * @return the worst individual
+	 */
 	public static Tab getWorstIndividual(Population pop) {
 		Tab worst = null;
 		Tab currentTab = null;

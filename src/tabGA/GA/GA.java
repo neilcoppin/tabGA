@@ -3,18 +3,42 @@ package tabGA.GA;
 import tabGA.Score;
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class GA manages the genetic algorithm.
+ */
 public class GA {
 	
+	/** The Constant POPULATION_SIZE. */
 	//Set mutation rate etc here
 	public static final Integer POPULATION_SIZE = 100000;
+	
+	/** The Constant NUM_OF_GENERATIONS. */
 	public static final Integer NUM_OF_GENERATIONS = 500;
 	
+	/** The score. */
 	Score score;
+	
+	/** The best candidate. */
 	Tab bestCandidate;
+	
+	/** The best candidate of initial pop. */
 	Tab bestCandidateOfInitialPop;
+	
+	/** The worst candidate of initial pop. */
 	Tab worstCandidateOfInitialPop;
 	
 	
+	/**
+	 * Start.
+	 *
+	 * @param score the score
+	 * @return the tab
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 */
 	public Tab start(Score score) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException{
 		
 		this.score = score;

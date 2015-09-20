@@ -2,8 +2,18 @@ package tabGA.GA;
 
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class FingerStretchCostFunc penalises chords which contain wide fret stretches.
+ */
 public class FingerStretchCostFunc {
 
+	/**
+	 * Gets the cost.
+	 *
+	 * @param tab the tab
+	 * @return the cost
+	 */
 	public static int getCost(Tab tab) {
 
 		int score = 0;
@@ -33,6 +43,13 @@ public class FingerStretchCostFunc {
 		return score;
 	}
 
+	/**
+	 * Gets the stretch.
+	 *
+	 * @param fretA the fret a
+	 * @param fretB the fret b
+	 * @return the stretch
+	 */
 	private static int getStretch(int fretA, int fretB) {
 
 		return Math.abs(fretA - fretB);

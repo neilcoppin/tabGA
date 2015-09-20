@@ -14,8 +14,17 @@ import javax.sound.midi.InvalidMidiDataException;
 
 import tabGA.GA.GA;
 
+/**
+ * The Main Class that runs the program.
+ */
 public class Main {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 * @throws Exception the exception
+	 */
 	public static void main(String[] args) throws Exception {
 
 		File inputFolder = new File("C:/inputFolder");
@@ -27,7 +36,7 @@ public class Main {
 		System.out.println("Found file: " + fileName);
 		
 		
-		MidiTranscriber midiTrsc = new MidiTranscriber();
+		//MidiTranscriber midiTrsc = new MidiTranscriber();
 		PrintWriter pw = new PrintWriter(new FileWriter("output.txt"), true);
 		PrintWriter pw2 = new PrintWriter(new FileWriter(midiOutputFileName),
 				true);
@@ -36,10 +45,10 @@ public class Main {
 
 		MidiParser.midiToString(midiFile, pw2);
 		
-		Scanner scanner = new Scanner(midiOutputFileName);
+		//Scanner scanner = new Scanner(midiOutputFileName);
 		//scanner.useDelimiter("\\s");
 
-		String event = new String();
+		//String event = new String();
 
 		boolean foundNote = false;
 
@@ -71,23 +80,25 @@ public class Main {
 		}
 		*/
 		
+		/*
 		event = scanner.next();
-
+		System.out.println("Event value: " + event);
 		while (scanner.hasNextLine()) {
 			// OLD SYSTEM COMMENCE
 			// System.out.println("Raw data: " + event);
 			// pw2.println(event);
 			// trsc.transcribeEvent(event, pw);
 			// OLD SYSTEM FINISH (except event = scanner.next)
-
+			System.out.println("Transcribing something");
 			midiTrsc.transcribeMidiPitch(event, pw3);
 
 			event = scanner.next();
 		}
+		*/
 
 		System.out.println("All done, ending doc");
 		
-		scanner.close();
+		//scanner.close();
 		pw2.close();
 		pw3.close();
 

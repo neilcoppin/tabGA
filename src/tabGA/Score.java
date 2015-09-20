@@ -2,28 +2,53 @@ package tabGA;
 
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Score represents a musical score, based on the source
+ * MIDI file.
+ */
 public class Score {
 
+	/** The notes that construct the composition. */
 	private ArrayList<Note> notes = new ArrayList<Note>();
 
+	/**
+	 * Adds the note.
+	 *
+	 * @param note the note
+	 */
 	public void addNote(Note note) {
 
 		notes.add(note);
 
 	}
 
+	/**
+	 * Length.
+	 *
+	 * @return the int
+	 */
 	public int length() {
 
 		return notes.size();
 
 	}
 
+	/**
+	 * Gets the note at.
+	 *
+	 * @param i the i
+	 * @return the note at
+	 */
 	public Note getNoteAt(int i) {
 
 		return notes.get(i);
 
 	}
 
+	/**
+	 * Transpose for lute by average.
+	 */
 	public void transposeForLuteByAverage() {
 
 		Integer total = 0;
@@ -40,6 +65,9 @@ public class Score {
 
 	}
 	
+	/**
+	 * Transpose by octave.
+	 */
 	public void transposeByOctave() {
 
 		int lowestNote = getLowestNote();
@@ -63,6 +91,11 @@ public class Score {
 		
 	}
 
+	/**
+	 * Move all notes by octave.
+	 *
+	 * @param oct the oct
+	 */
 	public void moveAllNotesByOctave(int oct) {
 
 		int transposition = (12*oct);
@@ -75,6 +108,12 @@ public class Score {
 
 	}
 	
+	/**
+	 * Move all notes by interval.
+	 *
+	 * @param from the from
+	 * @param to the to
+	 */
 	public void moveAllNotesByInterval(int from, int to) {
 
 		int transposition;
@@ -93,6 +132,9 @@ public class Score {
 
 	}
 
+	/**
+	 * Move lowest note in score to root on sixth.
+	 */
 	public void moveLowestNoteInScoreToRootOnSixth() {
 
 		int lowestNote = getLowestNote();
@@ -112,6 +154,11 @@ public class Score {
 
 	}
 
+	/**
+	 * Gets the lowest note.
+	 *
+	 * @return the lowest note
+	 */
 	private int getLowestNote() {
 
 		int lowestNote = 127;

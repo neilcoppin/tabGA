@@ -6,10 +6,21 @@ import java.util.Arrays;
 import tabGA.FingeredNote;
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class BarrePreferredCostFunc rewards barre chords.
+ */
 public class BarrePreferredCostFunc {
 	
+	/** The chord. */
 	static int[] chord = new int[7];
 
+	/**
+	 * Gets the cost.
+	 *
+	 * @param tab the tab
+	 * @return the cost
+	 */
 	public static int getCost(Tab tab) {
 
 		clearChord();
@@ -42,6 +53,11 @@ public class BarrePreferredCostFunc {
 
 	}
 
+	/**
+	 * Score frets in use.
+	 *
+	 * @return the int
+	 */
 	private static int scoreFretsInUse() {
 
 		int score = 0;
@@ -58,6 +74,9 @@ public class BarrePreferredCostFunc {
 		return score;
 	}
 
+	/**
+	 * Clear chord.
+	 */
 	private static void clearChord() {
 
 		//System.out.println("Clearing chord!");
@@ -67,6 +86,12 @@ public class BarrePreferredCostFunc {
 		
 	}
 
+	/**
+	 * Adds the finger to chord.
+	 *
+	 * @param course the course
+	 * @param fret the fret
+	 */
 	private static void addFingerToChord(int course, int fret) {
 		
 		

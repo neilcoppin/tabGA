@@ -1,15 +1,28 @@
 package tabGA;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Note represents a musical note.
+ */
 public class Note {
 
+	/** The Constant VALID_NOTES. */
 	public static final char[] VALID_NOTES = { 'A', 'B', 'C', 'D', 'E', 'F',
 			'G' };
+	
+	/** The Constant VALID_OCTAVES. */
 	public static final char[] VALID_OCTAVES = { '0', '1', '2', '3', '4', '5',
 			'6', '7', '8' };
+	
+	/** The Constant SHARPS. */
 	public static final String[] SHARPS = { "C", "C#", "D", "D#", "E", "F",
 			"F#", "G", "G#", "A", "A#", "B" };
+	
+	/** The Constant FLATS. */
 	public static final String[] FLATS = { "C", "Db", "D", "Eb", "E", "F",
 			"Gb", "G", "Ab", "A", "Bb", "B" };
+	
+	/** The Constant NATURALS. */
 	//public static final String[] NATURALS = { "C", "D", "E", "F", "G", "A", "B" };
 	public static final String[] NATURALS = {"A", "B", "C", "D", "E", "F", "G"};
 	
@@ -29,59 +42,129 @@ public class Note {
 	public static final byte[] OCTAVE_10 = { 120, 122, 124, 125, 127 };
 	*/
 	
+	/** The Constant OCTAVE_0. */
 	public static final byte[] OCTAVE_0 = { 21, 23, 24, 26, 28, 29, 31 };
+	
+	/** The Constant OCTAVE_1. */
 	public static final byte[] OCTAVE_1 = { 33, 35, 36, 38, 40, 41, 43 };
+	
+	/** The Constant OCTAVE_2. */
 	public static final byte[] OCTAVE_2 = { 45, 47, 48, 50, 52, 53, 55 };
+	
+	/** The Constant OCTAVE_3. */
 	public static final byte[] OCTAVE_3 = { 57, 59, 60, 62, 64, 65, 67 };
+	
+	/** The Constant OCTAVE_4. */
 	public static final byte[] OCTAVE_4 = { 69, 71, 72, 74, 76, 77, 79 };
+	
+	/** The Constant OCTAVE_5. */
 	public static final byte[] OCTAVE_5 = { 81, 83, 84, 86, 88, 89, 91 };
+	
+	/** The Constant OCTAVE_6. */
 	public static final byte[] OCTAVE_6 = { 93, 95, 96, 98, 100, 101, 103 };
+	
+	/** The Constant OCTAVE_7. */
 	public static final byte[] OCTAVE_7 = { 105, 107, 108, 110, 112, 113, 115 };
+	
+	/** The Constant OCTAVE_8. */
 	public static final byte[] OCTAVE_8 = { 117, 119, 120, 122, 124, 125, 127 };
 
 
+	/** The Constant ALL_VALUES_OCTAVE_0. */
 	// Depreciated, no longer used
 	public static final byte[] ALL_VALUES_OCTAVE_0 = { 0, 1, 2, 3, 4, 5, 6, 7,
 			8, 9, 10, 11 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_1. */
 	public static final byte[] ALL_VALUES_OCTAVE_1 = { 12, 13, 14, 15, 16, 17,
 			18, 19, 20, 21, 22, 23 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_2. */
 	public static final byte[] ALL_VALUES_OCTAVE_2 = { 24, 25, 26, 27, 28, 29,
 			30, 31, 32, 33, 34, 35 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_3. */
 	public static final byte[] ALL_VALUES_OCTAVE_3 = { 36, 37, 38, 39, 40, 41,
 			42, 43, 44, 45, 46, 47 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_4. */
 	public static final byte[] ALL_VALUES_OCTAVE_4 = { 48, 49, 50, 51, 52, 53,
 			54, 55, 56, 57, 58, 59 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_5. */
 	public static final byte[] ALL_VALUES_OCTAVE_5 = { 60, 61, 62, 63, 64, 65,
 			66, 67, 68, 69, 70, 71 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_6. */
 	public static final byte[] ALL_VALUES_OCTAVE_6 = { 72, 73, 74, 75, 76, 77,
 			78, 79, 80, 81, 82, 83 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_7. */
 	public static final byte[] ALL_VALUES_OCTAVE_7 = { 84, 85, 86, 87, 88, 89,
 			90, 91, 92, 93, 94, 95 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_8. */
 	public static final byte[] ALL_VALUES_OCTAVE_8 = { 96, 97, 98, 99, 100,
 			101, 102, 103, 104, 105, 106, 107 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_9. */
 	public static final byte[] ALL_VALUES_OCTAVE_9 = { 108, 109, 110, 111, 112,
 			113, 114, 115, 116, 117, 118, 119 };
+	
+	/** The Constant ALL_VALUES_OCTAVE_10. */
 	public static final byte[] ALL_VALUES_OCTAVE_10 = { 120, 121, 122, 123,
 			124, 125, 126, 127 };
+	
+	/** The Constant MIDI_DURATIONS. */
 	public static final char[] MIDI_DURATIONS = { 'w', 'h', 'q', 'i', 's', 't',
 			'x', 'o' };
+	
+	/** The Constant TAB_DURATIONS. */
 	public static final char[] TAB_DURATIONS = { 'W', 'w', '0', '1', '2', '3',
 			'4', '5' };
 
+	/** The pitch. */
 	public Integer pitch;
+	
+	/** The event num. */
 	Integer eventNum;
 
+	/** The name. */
 	char name;
+	
+	/** The octave. */
 	int octave;
+	
+	/** The is sharp. */
 	boolean isSharp = false;
+	
+	/** The is flat. */
 	boolean isFlat = false;
+	
+	/** The duration. */
 	char duration;
+	
+	/** The accidental. */
 	char accidental;
+	
+	/** The octave values. */
 	byte[] octaveValues;
+	
+	/** The accidental value. */
 	byte accidentalValue = 0;
+	
+	/** The transpose. */
 	int transpose = 0;
+	
+	/** The e. */
 	Exception e;
 
+	/**
+	 * Instantiates a new note.
+	 *
+	 * @param pitch the pitch
+	 * @param eventNum the event num
+	 */
 	public Note(Integer pitch, Integer eventNum) {
 
 		this.pitch = pitch;
@@ -89,6 +172,12 @@ public class Note {
 
 	}
 
+	/**
+	 * Instantiates a new note.
+	 *
+	 * @param pitch the pitch
+	 * @param eventNum the event num
+	 */
 	public Note(String pitch, Integer eventNum) {
 
 		this.pitch = Integer.parseInt(pitch);
@@ -96,6 +185,9 @@ public class Note {
 
 	}
 
+	/**
+	 * Instantiates a new note.
+	 */
 	public Note() {
 
 		name = '\u0000';
@@ -116,6 +208,9 @@ public class Note {
 	 * eventNum; }
 	 */
 
+	/**
+	 * New note.
+	 */
 	public void newNote() {
 		name = '\u0000';
 		octave = 0;
@@ -129,10 +224,21 @@ public class Note {
 		eventNum = null;
 	}
 
+	/**
+	 * Sets the name.
+	 *
+	 * @param name the new name
+	 */
 	public void setName(char name) {
 		this.name = name;
 	}
 
+	/**
+	 * Sets the accidental.
+	 *
+	 * @param accidental the new accidental
+	 * @throws Exception the exception
+	 */
 	public void setAccidental(char accidental) throws Exception {
 		if (accidental == 'b') {
 			isFlat = true;
@@ -148,6 +254,11 @@ public class Note {
 		}
 	}
 
+	/**
+	 * Sets the octave.
+	 *
+	 * @param octave the new octave
+	 */
 	public void setOctave(char octave) {
 		System.out.println("NOTE.setOctave: received = " + octave);
 		this.octave = Character.getNumericValue(octave);
@@ -176,6 +287,11 @@ public class Note {
 		
 	}
 
+	/**
+	 * Sets the duration.
+	 *
+	 * @param dur the new duration
+	 */
 	public void setDuration(char dur) {
 		char tabChar = 'x';
 
@@ -189,11 +305,19 @@ public class Note {
 		duration = tabChar;
 	}
 
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	public String toString() {
 		String str = "Pitch: " +  pitch  + "; EventNum: " + eventNum + "; Octave: " + octave + "; Name: " + name + "; Accidental: " + accidental; 
 		return str;
 	}
 
+	/**
+	 * Gets the note pitch string.
+	 *
+	 * @return the note pitch string
+	 */
 	private String getNotePitchString() {
 		String val;
 		if (isSharp) {
@@ -206,6 +330,11 @@ public class Note {
 		return val;
 	}
 
+	/**
+	 * Note pitch.
+	 *
+	 * @return the byte
+	 */
 	public byte notePitch() {
 		byte pitchValue = -1;
 		String val = Character.toString(name);
@@ -223,6 +352,9 @@ public class Note {
 		return pitchValue;
 	}
 	
+	/**
+	 * Sets the note pitch.
+	 */
 	public void setNotePitch() {
 		Integer pitchValue = -1;
 		String val = Character.toString(name);
@@ -240,19 +372,39 @@ public class Note {
 		pitch = pitchValue;
 	}
 	
+	/**
+	 * Gets the midi pitch.
+	 *
+	 * @return the midi pitch
+	 */
 	public Integer getMidiPitch() {
 		return pitch;
 	}
 	
+	/**
+	 * Gets the event num.
+	 *
+	 * @return the event num
+	 */
 	public int getEventNum(){
 		return eventNum.intValue();
 	}
 	
+	/**
+	 * Gets the pitch.
+	 *
+	 * @return the pitch
+	 */
 	public Integer getPitch(){
 		
 		return (pitch+transpose);
 	}
 	
+	/**
+	 * Sets the tranposition.
+	 *
+	 * @param i the new tranposition
+	 */
 	public void setTranposition(int i){
 		transpose = i;
 	}
@@ -300,6 +452,12 @@ public class Note {
 	 * }
 	 */
 
+	/**
+	 * Decimal duration to string.
+	 *
+	 * @param decimalDuration the decimal duration
+	 * @return the string
+	 */
 	public static String decimalDurationToString(double decimalDuration) {
 		StringBuilder sb = new StringBuilder();
 		System.out.println("NOTE: p1 decimalDuration = " + decimalDuration);
@@ -356,6 +514,11 @@ public class Note {
 		return sb.toString();
 	}
 
+	/**
+	 * Gets the duration.
+	 *
+	 * @return the duration
+	 */
 	public char getDuration() {
 		char dur = duration;
 		return dur;

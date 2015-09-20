@@ -4,8 +4,19 @@ import java.util.ArrayList;
 
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class SameEventSameString is used penalise tabs that attempt
+ * to play two FNs within a chord on the same course.
+ */
 public class SameEventSameString {
 
+	/**
+	 * Gets the cost.
+	 *
+	 * @param tab the tab
+	 * @return the cost
+	 */
 	public static int getCost(Tab tab){
 		
 		int score = 0;

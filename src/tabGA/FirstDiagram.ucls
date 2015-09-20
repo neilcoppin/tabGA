@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  <class id="1" language="java" name="tabGA.Score" project="tabGA" file="/tabGA/src/tabGA/Score.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="243" width="250" x="2807" y="1274"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="tabGA.Tests" project="tabGA" file="/tabGA/src/tabGA/Tests.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="975" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="tabGA.GA.StringChangeCostFunc" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/StringChangeCostFunc.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="154" x="1839" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="tabGA.GA.Evolver" project="tabGA" file="/tabGA/src/tabGA/GA/Evolver.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="241" x="1348" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="tabGA.FingeredNote" project="tabGA" file="/tabGA/src/tabGA/FingeredNote.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="369" width="207" x="3097" y="1575"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="tabGA.GA.WeightedRouletteWheel" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/WeightedRouletteWheel.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="197" x="3359" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="tabGA.GA.Population" project="tabGA" file="/tabGA/src/tabGA/GA/Population.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="154" x="3165" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="tabGA.MidiTranscriber" project="tabGA" 
+    file="/tabGA/src/tabGA/MidiTranscriber.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="258" x="1426" y="1274"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="tabGA.TabTranscriber" project="tabGA" file="/tabGA/src/tabGA/TabTranscriber.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="258" x="1128" y="1274"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="tabGA.TabBuilder" project="tabGA" file="/tabGA/src/tabGA/TabBuilder.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="203" x="885" y="1274"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="tabGA.GA.GA" project="tabGA" file="/tabGA/src/tabGA/GA/GA.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="135" width="184" x="2941" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="tabGA.GA.SameEventSameString" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/SameEventSameString.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="155" x="2523" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="tabGA.GA.FingerStretchCostFunc" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/FingerStretchCostFunc.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="154" x="566" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="tabGA.GA.FretJumpCostFunc" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/FretJumpCostFunc.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="143" x="2340" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="tabGA.MidiParser" project="tabGA" file="/tabGA/src/tabGA/MidiParser.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="183" x="2718" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="tabGA.Note" project="tabGA" file="/tabGA/src/tabGA/Note.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1089" width="212" x="2807" y="1575"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="17" language="java" name="tabGA.GA" project="tabGA" file="/tabGA/src/tabGA/GA" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="101" x="425" y="37"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="18" language="java" name="tabGA.Tab" project="tabGA" file="/tabGA/src/tabGA/Tab.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="261" width="235" x="3097" y="1274"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="tabGA.Transcriber" project="tabGA" file="/tabGA/src/tabGA/Transcriber.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="180" x="1128" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="tabGA.Lute" project="tabGA" file="/tabGA/src/tabGA/Lute.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="1197" width="267" x="2033" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="tabGA.Main" project="tabGA" file="/tabGA/src/tabGA/Main.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="99" width="113" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="tabGA.GA.BarrePreferredCostFunc" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/BarrePreferredCostFunc.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="170" x="1629" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="tabGA.GA.DistanceFromNutCostFunc" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/DistanceFromNutCostFunc.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="175" x="760" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="24" language="java" name="tabGA.GA.FitnessFunction" project="tabGA" 
+    file="/tabGA/src/tabGA/GA/FitnessFunction.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="191" x="194" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="25">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="26" name="notes">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="27" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="16" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="28">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="29" name="population">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="32" name="bestCandidate">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="34">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="35" name="score">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="36" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="1" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="37">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="38">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="39" name="tab">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="41">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="19"/>  
+  </generalization>  
+  <association id="42">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="43" name="wheel">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="44" minimum="0" maximum="2147483647">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="45">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="46" name="bestCandidateOfInitialPop">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="47" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="48">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="49" name="tab">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="50" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="11" navigable="false">      
+      <attribute id="52" name="worstCandidateOfInitialPop">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="53" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

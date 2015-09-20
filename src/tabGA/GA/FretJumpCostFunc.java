@@ -2,8 +2,18 @@ package tabGA.GA;
 
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class FretJumpCostFunc penalises tabs which skip between distant frets.
+ */
 public class FretJumpCostFunc {
 
+	/**
+	 * Gets the cost.
+	 *
+	 * @param tab the tab
+	 * @return the cost
+	 */
 	public static int getCost(Tab tab) {
 
 		int score = 0;
@@ -37,6 +47,13 @@ public class FretJumpCostFunc {
 
 	}
 
+	/**
+	 * Gets the gap penalty.
+	 *
+	 * @param lastFret the last fret
+	 * @param currentFret the current fret
+	 * @return the gap penalty
+	 */
 	private static int getGapPenalty(int lastFret, int currentFret) {
 		
 		int penalty;

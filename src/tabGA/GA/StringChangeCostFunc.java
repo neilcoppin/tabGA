@@ -2,8 +2,19 @@ package tabGA.GA;
 
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class StringChangeCostFunc is used to cost a given tab
+ * based on the number of string/course changes.
+ */
 public class StringChangeCostFunc {
 
+	/**
+	 * Gets the cost.
+	 *
+	 * @param tab the tab
+	 * @return the cost
+	 */
 	public static int getCost(Tab tab) {
 
 		int score = 0;

@@ -5,11 +5,24 @@ import java.util.TreeMap;
 
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class WeightedRouletteWheel is used for probability distribution 
+ * and represents a weighted roulette wheel.
+ */
 public class WeightedRouletteWheel {
 
+	/** The wheel. */
 	TreeMap<Double, Tab> wheel;
+	
+	/** The spin. */
 	Random spin = new Random();
 
+	/**
+	 * Instantiates a new weighted roulette wheel from a population.
+	 *
+	 * @param pop the pop
+	 */
 	public WeightedRouletteWheel(Population pop) {
 		double totalFitness = 0.0;
 		// for (Tab i : pop)
@@ -30,14 +43,31 @@ public class WeightedRouletteWheel {
 		 
 	}
 
+	/**
+	 * Fitness.
+	 *
+	 * @param i the i
+	 * @return the double
+	 */
 	private Double fitness(Tab i) {
 		return (1.0 / (i.getCost() + 1));
 	}
 
+	/**
+	 * Next individual.
+	 *
+	 * @return the tab
+	 */
 	public Tab nextIndividual() {
 		return getIndividual(spin.nextDouble());
 	}
 
+	/**
+	 * Gets the individual.
+	 *
+	 * @param pocket the pocket
+	 * @return the individual
+	 */
 	public Tab getIndividual(double pocket) {
 		// Double getDub = wheel.tailMap(pocket).firstKey();
 		// Tab individual = wheel.get(getDub);

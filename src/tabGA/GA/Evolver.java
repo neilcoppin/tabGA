@@ -5,10 +5,27 @@ import java.util.Random;
 import tabGA.FingeredNote;
 import tabGA.Tab;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Evolver handles the evolutionary process of passing
+ * genes from two parents to the children when creating the next
+ * population.
+ */
 public class Evolver {
 	
+	/** The Constant MUTATION_RATE. */
 	private final static double MUTATION_RATE = 0.08;
 
+	/**
+	 * Creates the next generation.
+	 *
+	 * @param pop the pop
+	 * @return the population
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 */
 	public static Population createNextGeneration(Population pop) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 
 		WeightedRouletteWheel wheel = new WeightedRouletteWheel(pop);
@@ -29,6 +46,15 @@ public class Evolver {
 
 	}
 
+	/**
+	 * Mutate.
+	 *
+	 * @param child the child
+	 * @throws IllegalArgumentException the illegal argument exception
+	 * @throws IllegalAccessException the illegal access exception
+	 * @throws NoSuchFieldException the no such field exception
+	 * @throws SecurityException the security exception
+	 */
 	private static void mutate(Tab child) throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
 		
 		Random rand = new Random();
@@ -44,6 +70,12 @@ public class Evolver {
 		
 	}
 
+	/**
+	 * Crossover.
+	 *
+	 * @param parents the parents
+	 * @return the tab[]
+	 */
 	private static Tab[] crossover(Tab[] parents) {
 
 		Random rand = new Random();
@@ -82,6 +114,12 @@ public class Evolver {
 
 	
 
+	/**
+	 * Gets the parents.
+	 *
+	 * @param wheel the wheel
+	 * @return the parents
+	 */
 	private static Tab[] getParents(WeightedRouletteWheel wheel) {
 		
 		Tab[] parents;
